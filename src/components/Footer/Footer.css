@@ -1,0 +1,11 @@
+.grid-container-footer {
+    background-color: #0d1c27;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 50px;
+    grid-template-areas:
+        "logo img"
+        "parrafo parrafo";
+}
