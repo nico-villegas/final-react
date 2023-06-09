@@ -7,7 +7,7 @@ const Cartwidget = () => {
     const { totalQuantity } = useContext(CartContext)
 
     return (
-        <Link to='/cart' className='cartWidget btn-group d-flex align-items-center'>
+        <Link to='/cart' className='cartWidget btn-group d-flex align-items-center '>
             { totalQuantity }
             <GrCart />
         </Link>

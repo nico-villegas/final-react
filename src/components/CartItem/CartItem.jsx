@@ -1,3 +1,4 @@
+import './CartItem.css'
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 
@@ -8,18 +9,18 @@ const CartItem = ({ id, nombre, precio, quantity}) => {
     
     return (
         <div>
-            <div className="card">
+            <div className="card d-flex flex-row justify-content-around align-items-center">
                 <div>
                     <h5 className="card-title">{nombre}</h5>
                 </div>
-                <div className="card-body">
+                <div className="card-body d-flex flex-row justify-content-around align-items-center">
                     <p className="card-text">Cantidad: {quantity}</p>
                     <p className="card-text">Precio: ${precio}</p>
                 </div>
                 <div>
                     <p className="card-text">SubTotal: {totalProducts}</p>
                 </div>
-                <div className='btn'>
+                <div className='btn bg-danger'>
                     <button onClick={() => removeItem(id)} className='btn'>X</button>
                 </div>
             </div>
