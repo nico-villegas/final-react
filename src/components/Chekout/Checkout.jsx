@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from 'firebase/firestore'
 import { db } from '../../firebase.config'
@@ -41,8 +41,8 @@ const Checkout = () => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stock
 
-                const productAddToCart = cart.find(prod => prod.id === doc.id)
-                const prodQuantity = productAddToCart?.quantity
+                const productAddedToCart = cart.find(prod => prod.id === doc.id)
+                const prodQuantity = productAddedToCart?.quantity
 
                 if(stockDb >= prodQuantity) {
                     batch.update(doc.ref, { stock: stockDb - prodQuantity })
@@ -82,7 +82,7 @@ const Checkout = () => {
     return (
         <div>
             <h1>Checkout</h1>
-            <CheckoutForm onCorfirm={createOrder}/>
+            <CheckoutForm onConfirm={createOrder}/>
         </div>
     )
 }

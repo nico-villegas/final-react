@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const CheckoutForm = ( onConfirm ) => {
+const CheckoutForm = ( {onConfirm} ) => {
     const [nombre, setNombre] = useState('')
     const [telefono, setTelefono] = useState('')
     const [email, setEmail] = useState('')
@@ -11,12 +11,13 @@ const CheckoutForm = ( onConfirm ) => {
         const userData = {
             nombre, telefono, email
         }
+
         onConfirm(userData)
     }
 
     return (
         <div className="container">
-            <form className="row g-3 m-3">
+            <form onSubmit={handleConfirm} className="row g-3 m-3">
                 <div className="col-6">
                     <label className="form-control">
                         Nombre
@@ -54,7 +55,7 @@ const CheckoutForm = ( onConfirm ) => {
                     </label>
                 </div>
                 <div className="col-6">
-                    <button type="submit" className="btn btn-primary" onClick={handleConfirm}>
+                    <button type="submit" className="btn btn-primary" >
                         Crear orden
                     </button>
                 </div> 
