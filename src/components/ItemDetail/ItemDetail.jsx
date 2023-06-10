@@ -32,10 +32,10 @@ const ItemDetail = ({ id, nombre, precio, descripcion, stock, img, alt, category
                     <p className="card-text"> {descripcion}</p>
                     <p className="card-text">Precio: ${precio}</p>
                 </div>
-                <div className='card-count'>
+                <div className='card-count d-flex align-items-center justify-content-center'>
                     {
                         quantityAdded > 0 ? (
-                            <Link to='/cart' className='Option'>Finalizar compra</Link>
+                            <Link to='/cart' className='btn-finalizar d-flex align-items-center justify-content-center'>Finalizar compra</Link>
                         ) : (
                             <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                         )
