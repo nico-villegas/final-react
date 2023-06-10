@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     const nav_item = [
         {

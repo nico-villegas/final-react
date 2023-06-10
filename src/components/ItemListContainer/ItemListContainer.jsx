@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../firebase.config';
 
-const Itemlistcontainer = ({ greeting }) => {
+const Itemlistcontainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -40,8 +40,7 @@ const Itemlistcontainer = ({ greeting }) => {
 
     return (
         <div className='item-list-container'>
-           {/*  <h1>{greeting}</h1> */}
-            {loading && <h1>Cargando...</h1>}
+            {loading && <h1 className='d-felx flex-row justify-content-center'>Cargando...</h1>}
             {!loading &&  products.length > 0 && <ItemList products={products}/>}
             
         </div>

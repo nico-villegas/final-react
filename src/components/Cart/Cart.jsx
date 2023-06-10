@@ -1,3 +1,4 @@
+import './Cart.css'
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -16,12 +17,14 @@ const Cart = () => {
     }
 
     return (
-        <div>
-            { cart.map(p => <CartItem key={p.id} {...p} />) } 
+        <div className='cart d-flex flex-column align-items-center'>
+            {cart.map(p => <CartItem key={p.id} {...p} />)}
             <h3>Total: ${total}</h3>
-            <button onClick={() => clearCart()} className='btn'>Limpiar carrito</button>
-            <Link to='/checkout'>Comprar carrito</Link>
-        </div> 
+            <div className='d-flex flex-row justify-content-around'>
+                <button onClick={() => clearCart()} className='btn-checkout btn' >Limpiar carrito</button>
+                <Link className='btn-checkout btn' to='/checkout'>Comprar carrito</Link>
+            </div>
+        </div>
     )
 }
 

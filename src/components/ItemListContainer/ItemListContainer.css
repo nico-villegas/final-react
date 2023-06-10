@@ -1,3 +1,7 @@
 .item-list-container{
     background-color: #142b3b;
 }
+
+.item-list-container h1{
+    color: #e47c5d;
+}

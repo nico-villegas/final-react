@@ -1,0 +1,24 @@
+.cart{
+    height: 80vh;
+    background-color: #142b3b;
+}
+
+.cart h3{
+    margin: 15px;
+    color: #ffcc99;
+}
+
+.cart .btn-checkout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 130px;
+    border: 1px solid #ffcc99;
+    text-decoration: none;
+    color: #e47c5d;
+    background-color: #0d1c27;
+    border-radius: 15px;
+    padding: 2px;
+    margin: 10px;
+}

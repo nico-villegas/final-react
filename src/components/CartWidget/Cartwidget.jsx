@@ -1,3 +1,4 @@
+import './CartWidget.css'
 import { useContext } from 'react'
 import { GrCart } from "react-icons/gr";
 import { CartContext } from '../../context/CartContext';
@@ -7,7 +8,7 @@ const Cartwidget = () => {
     const { totalQuantity } = useContext(CartContext)
 
     return (
-        <Link to='/cart' className='cartWidget btn-group d-flex align-items-center '>
+        <Link to='/cart' className='cart-widget btn d-flex align-items-center justify-content-center'>
             { totalQuantity }
             <GrCart />
         </Link>

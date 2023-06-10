@@ -8,7 +8,7 @@ const CartItem = ({ id, nombre, precio, quantity}) => {
     const totalProducts = quantity * precio
     
     return (
-        <div>
+        <div className='card-item'>
             <div className="card d-flex flex-row justify-content-around align-items-center">
                 <div>
                     <h5 className="card-title">{nombre}</h5>
@@ -18,9 +18,9 @@ const CartItem = ({ id, nombre, precio, quantity}) => {
                     <p className="card-text">Precio: ${precio}</p>
                 </div>
                 <div>
-                    <p className="card-text">SubTotal: {totalProducts}</p>
+                    <p className="card-text">SubTotal: ${totalProducts}</p>
                 </div>
-                <div className='btn bg-danger'>
+                <div className='btn-cart btn bg-danger d-flex align-items-center justify-content-center'>
                     <button onClick={() => removeItem(id)} className='btn'>X</button>
                 </div>
             </div>

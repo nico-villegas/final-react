@@ -1,3 +1,7 @@
+.card-item{
+    width: 80%;
+}
+
 .card div .card-title {
     color: #e47c5d;
 }
@@ -8,5 +12,11 @@
 
 .card div .card-text {
     color: #e47c5d;
+    margin: 15px;
 }
 
+.card .btn-cart {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+}
