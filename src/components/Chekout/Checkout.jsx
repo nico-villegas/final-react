@@ -1,3 +1,4 @@
+import './Checkout.css'
 import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from 'firebase/firestore'
@@ -80,7 +81,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className='checkout d-flex align-items-center justify-content-center flex-column'>
             <h1>Checkout</h1>
             <CheckoutForm onConfirm={createOrder}/>
         </div>
