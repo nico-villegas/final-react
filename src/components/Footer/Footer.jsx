@@ -1,3 +1,4 @@
+import './Footer.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo-nuevo-color.png'
@@ -11,7 +12,7 @@ const Footer = () => {
             <div className="grid-container-footer">
                 <div className="footer-link">
                     <Link to='/'>
-                        <img id='logo-home' src={logo} alt="logo-home" />
+                        <img src={logo} alt="logo-home" />
                     </Link>
                 </div>
                 <div className="grid-footer-img">

@@ -5,6 +5,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 import { CartProvider } from '../context/CartContext'
 import Cart from '../components/Cart/Cart'
 import Checkout from '../components/Chekout/Checkout'
+import Footer from '../components/Footer/Footer'
 
 const Rutas = () => {
     return (
@@ -19,6 +20,7 @@ const Rutas = () => {
                     <Route path='/checkout' element={<Checkout/>} />
                     <Route path='*' element={<h1>404 NOT FOUND</h1>} />
                 </Routes>
+                <Footer/>
             </CartProvider>
         </BrowserRouter>
     )

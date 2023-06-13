@@ -9,20 +9,22 @@ const Cart = () => {
 
     if (totalQuantity === 0) {
         return (
-            <div className='container-carrito-vacio'>
+            <div className='container-carrito-vacio d-flex flex-column align-items-center'>
                 <h1>No hay productos en el carrito</h1>
-                <Link to='/' className='btn'>Productos</Link>
+                <Link to='/' className='btn-checkout btn'>Productos</Link>
             </div>
         )
     }
 
     return (
-        <div className='cart d-flex flex-column align-items-center'>
-            {cart.map(p => <CartItem key={p.id} {...p} />)}
-            <h3>Total: ${total}</h3>
-            <div className='d-flex flex-row justify-content-around'>
-                <button onClick={() => clearCart()} className='btn-checkout btn' >Limpiar carrito</button>
-                <Link className='btn-checkout btn' to='/checkout'>Comprar carrito</Link>
+        <div className='cart d-flex flex-column align-items-center justify-content-center'>
+            <div className='container-card-item d-flex flex-column align-items-center'>
+                {cart.map(p => <CartItem key={p.id} {...p} />)}
+                <h3>Total: ${total}</h3>
+                <div className='d-flex flex-row justify-content-around'>
+                    <button onClick={() => clearCart()} className='btn-checkout btn' >Limpiar carrito</button>
+                    <Link className='btn-checkout btn' to='/checkout'>Comprar carrito</Link>
+                </div>
             </div>
         </div>
     )

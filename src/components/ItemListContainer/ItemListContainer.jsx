@@ -40,9 +40,13 @@ const Itemlistcontainer = () => {
 
     return (
         <div className='item-list-container'>
-            {loading && <h1 className='d-felx flex-row justify-content-center'>Cargando...</h1>}
-            {!loading &&  products.length > 0 && <ItemList products={products}/>}
-            
+            {loading && <h1 className='d-flex justify-content-center'>
+                {<div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>}
+            </h1>}
+            {!loading && products.length > 0 && <ItemList products={products} />}
+
         </div>
     );
 };

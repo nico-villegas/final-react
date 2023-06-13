@@ -1,6 +1,66 @@
+
 .grid-container-footer {
+    height: 20vh;
     background-color: #0d1c27;
     font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 50px;
+    grid-template-areas: "logo img" "parrafo parrafo";
+}
+
+.grid-container-footer .footer-link {
+    grid-area: logo;
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+}
+
+.grid-container-footer .footer-link a img {
+    width: 100px;
+    height: 100px;
+}
+
+.grid-container-footer .grid-footer-img {
+    grid-area: img;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.grid-container-footer .grid-footer-img .footer-img {
+    margin-right: 20px;
+}
+
+.grid-container-footer .grid-footer-img .footer-img a img {
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+.grid-container-footer .grid-footer-img .footer-img a img:hover {
+    transform: scale(1.1);
+}
+
+.grid-container-footer .footer-parrafo {
+    color: #ffcc99;
+    grid-area: parrafo;
+    display: flex;
+    justify-content: center;
+    align-items: none;
+    flex-direction: row;
+}
+
+
+
+
+
+
+/* .grid-container-footer {
+    background-color: #0d1c27;
     justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,3 +69,62 @@
         "logo img"
         "parrafo parrafo";
 }
+
+
+.grid-container-footer .footer-link {
+    grid-area: logo;
+}
+
+.grid-container-footer .footer-link a img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.grid-container-footer  */
+/* 
+.grid-container-footer{
+    background-color: nth($paleta-colores , 1 );
+    font-family: 'Poppins', sans-serif;  
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px 50px;
+    grid-template-areas: 
+    "logo img"
+    "parrafo parrafo"
+    ;
+    .footer-link{
+        grid-area: logo;
+        @include flex (flex,none,center,row);
+        a{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .grid-footer-img{
+        grid-area: img;
+        @include flex (flex,end,center,row);
+        .footer-img{
+            margin-right: 20px;
+            a{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    transition: 1s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .footer-parrafo{
+        color: nth($paleta-colores , 5 );
+        grid-area: parrafo;
+        @include flex (flex,center,none,row);
+    }
+}
+*/
