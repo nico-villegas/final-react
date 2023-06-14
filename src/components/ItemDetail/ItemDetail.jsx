@@ -23,21 +23,21 @@ const ItemDetail = ({ id, nombre, precio, descripcion, stock, img, alt, category
     return (
         <div className="card-detail card">
             <div className="card-body">
-                <div className='card-img'>
-                    <img src={img} className='img-detail' alt={alt} />
-                </div>
-                <div className='card-content'>
-                    <h5>{nombre}</h5>
-                    <p className="card-text">Categoria: {category}</p>
-                    <p className="card-text"> {descripcion}</p>
-                    <p className="card-text">Precio: ${precio}</p>
+                <img src={img} alt={alt} />
+                <div className='card-content d-flex flex-column justify-content-evenly'>
+                    <h5 className="card-title">{nombre}</h5>
+                    <div className='container-card-text d-flex flex-column align-items-start'>
+                        <p className="card-text"> {descripcion}</p>
+                        <p className="card-text">Categoria: {category}</p>
+                        <p className="card-text">Precio: ${precio}</p>
+                    </div>
                 </div>
                 <div className='card-count d-flex align-items-center justify-content-center'>
                     {
                         quantityAdded > 0 ? (
                             <Link to='/cart' className='btn-finalizar d-flex align-items-center justify-content-center'>Finalizar compra</Link>
                         ) : (
-                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
+                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
                         )
                     }
                 </div>

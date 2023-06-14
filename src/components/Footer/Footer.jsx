@@ -15,7 +15,7 @@ const Footer = () => {
                         <img src={logo} alt="logo-home" />
                     </Link>
                 </div>
-                <div className="grid-footer-img">
+                <div className="grid-footer-img d-flex flex-row justify-content-end align-items-center">
                     <div className="footer-img">
 
                         <Link to='https://web.whatsapp.com/' target="_blank"> 
@@ -29,7 +29,7 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="footer-parrafo">
+                <div className="footer-parrafo d-flex flex-row justify-content-center">
                     <p>Copyright © 2023 Beto's, todos los derechos reservados.</p>
                 </div>
             </div>
