@@ -9,7 +9,7 @@ const Cart = () => {
 
     if (totalQuantity === 0) {
         return (
-            <div className='container-carrito-vacio d-flex flex-column align-items-center'>
+            <div className='container-carrito-vacio d-flex flex-column align-items-center justify-content-center'>
                 <h1>No hay productos en el carrito</h1>
                 <Link to='/' className='btn-checkout btn'>Productos</Link>
             </div>

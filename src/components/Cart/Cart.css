@@ -1,22 +1,23 @@
 .container-carrito-vacio{
     background-color: #142b3b;
-    height: 80vh;
+    height: 65vh;
 } 
 
 .container-carrito-vacio h1{
     color: #ffcc99;
-    margin-top: 60px;
     margin-bottom: 30px;
 }
 
 .cart{
-    height: 50%;
+    height:auto;
     background-color: #142b3b;
 }
 
 .cart .container-card-item{
     height: 100%;
+    width: 80%;
 }
+
 
 .cart h3{
     margin: 15px;
@@ -36,4 +37,10 @@
     border-radius: 15px;
     padding: 2px;
     margin: 10px;
+}
+
+@media screen and (max-width:430px){
+    .container-carrito-vacio h1{
+        font-size: 20px;
+    }
 }

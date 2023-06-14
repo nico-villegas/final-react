@@ -1,9 +1,22 @@
 .card-item{
-    width: 80%;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 10px 0;
 }
 
-.card div .card-title {
+.card-item .card {
+    height: 90%;
+    margin: 0px;
+    width: 100%;
+}
+
+.card .container-card-title{
+    width: 30%;
+}
+
+.card .container-card-title .card-title {
     color: #e47c5d;
+    margin: 0px;
 }
 
 .card .card-body p{
@@ -15,8 +28,33 @@
     margin: 15px;
 }
 
-.card .btn-cart {
+.card .container-btn-card {
     margin: 5px;
     height: 40px;
+    width: 10%;
+}
+
+.card .btn-card{
+    border-radius: 3px ;
     width: 40px;
+}
+
+@media screen and (max-width:850px){
+    .card .container-card-title .card-title{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:620px){
+    .card .container-card-title .card-title{
+        font-size: 10px;
+    }
+
+    .card .card-text{
+        font-size: 10px;
+    }
+
+    #btn-x{
+        padding: 0px;
+    }
 }

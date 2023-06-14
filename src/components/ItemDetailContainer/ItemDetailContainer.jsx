@@ -34,11 +34,11 @@ const ItemDetailContainer = () => {
 
     return (
         <section className='container-detail d-flex justify-content-center aling-items-center'>
-            {loading && <h1 className='d-flex justify-content-center'>
-                {<div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            {loading && <div className='container-spinner d-flex justify-content-center align-items-center'>
+                {<div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>}
-            </h1>}
+            </div>}
             {!loading && <ItemDetail {...product} />}
 
         </section>
