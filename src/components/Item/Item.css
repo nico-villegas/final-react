@@ -28,9 +28,10 @@
     margin-top: 10px;
 }
 
-.card .card-body .card-text{
+.card .card-body .item-text{
     margin: 0px;
     color: #5ebdb256;
+    font-size: 15px;
 }
 
 .btn-ver-mas {

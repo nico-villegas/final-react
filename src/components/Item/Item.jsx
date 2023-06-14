@@ -10,8 +10,8 @@ const Item = ({ id, nombre, precio, stock, img, alt }) => {
             <div className="card-body d-flex flex-column justify-content-around">
                 <h5 className="card-title">{nombre}</h5>
                 <div className='container-card-text d-flex flex-column'>
-                    <p className="card-text">Precio: ${precio}</p>
-                    <p className="card-text">Cantidad disponible: {stock}</p>
+                    <p className="item-text">Precio: ${precio}</p>
+                    <p className="item-text">Cantidad disponible: {stock}</p>
                 </div>
             </div>
             <div className='btn'>
