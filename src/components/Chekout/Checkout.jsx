@@ -14,7 +14,7 @@ const Checkout = () => {
     const createOrder = async ({ nombre, telefono, email }) => {
         setLoading(true)
 
-        try{
+        try {
             const objOrder = {
                 buyer: {
                     nombre, telefono, email
@@ -25,7 +25,7 @@ const Checkout = () => {
             }
 
             const batch = writeBatch(db)
-            
+
             const outOfStock = []
 
             const ids = cart.map(prod => prod.id)
@@ -37,7 +37,7 @@ const Checkout = () => {
             const { docs } = productosAddedFromFirestore
 
             //Actualización de stock
-            
+
             docs.forEach(doc => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stock
@@ -45,14 +45,14 @@ const Checkout = () => {
                 const productAddedToCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = productAddedToCart?.quantity
 
-                if(stockDb >= prodQuantity) {
+                if (stockDb >= prodQuantity) {
                     batch.update(doc.ref, { stock: stockDb - prodQuantity })
                 } else {
-                    outOfStock.push({ id: doc.id, ...dataDoc})
+                    outOfStock.push({ id: doc.id, ...dataDoc })
                 }
             })
 
-            if(outOfStock.length === 0) {
+            if (outOfStock.length === 0) {
                 await batch.commit()
 
                 const orderRef = collection(db, 'orders')
@@ -64,7 +64,7 @@ const Checkout = () => {
             } else {
                 console.error('Hay productos que estan fuera de stock')
             }
-            
+
         } catch (error) {
             console.log(error)
         } finally {
@@ -72,18 +72,23 @@ const Checkout = () => {
         }
     }
 
-    if(loading) {
-        return <h1>Se esta generando su orden...</h1>
+    if (loading) {
+        return <div className='generandor-orden d-flex align-items-center justify-content-center'>
+            <h1>Se esta generando su orden...</h1>
+        </div>
+
     }
 
-    if(orderId) {
-        return <h1>El id de su orden es: {orderId}</h1>
+    if (orderId) {
+        return <div className='generandor-orden d-flex align-items-center justify-content-center'>
+            <h1>El id de su orden es: <span style={{color:'#e47c5d'}}>{orderId}</span></h1>
+        </div>
     }
 
     return (
         <div className='checkout d-flex align-items-center justify-content-center flex-column'>
             <h1>Checkout</h1>
-            <CheckoutForm onConfirm={createOrder}/>
+            <CheckoutForm onConfirm={createOrder} />
         </div>
     )
 }

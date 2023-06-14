@@ -3,6 +3,25 @@
     height: 80vh;
 }
 
+.generandor-orden{
+    background-color: #142b3b;
+    color: #ffcc99;
+    height: 60vh;
+}
+
+
 .checkout h1{
     color: #ffcc99;
+}
+
+@media screen and (max-width:720px) {
+    .generandor-orden h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .generandor-orden h1{
+        font-size: 16px;
+    }
 }
