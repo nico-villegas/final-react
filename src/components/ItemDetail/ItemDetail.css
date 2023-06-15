@@ -33,6 +33,8 @@
 
 .card-detail .card-content .container-card-text .card-text{
     margin: 5px;
+    color: #5ebdb256;
+    font-size: 15px;
 }
 
 .card-detail .card-count{

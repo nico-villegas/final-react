@@ -73,7 +73,10 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <div className='generandor-orden d-flex align-items-center justify-content-center'>
+        return <div className='generandor-orden d-flex flex-column align-items-center justify-content-center'>
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
             <h1>Se esta generando su orden...</h1>
         </div>
 
@@ -81,7 +84,7 @@ const Checkout = () => {
 
     if (orderId) {
         return <div className='generandor-orden d-flex align-items-center justify-content-center'>
-            <h1>El id de su orden es: <span style={{color:'#e47c5d'}}>{orderId}</span></h1>
+            <h1>El id de su orden es: <span style={{ color: '#e47c5d' }}>{orderId}</span></h1>
         </div>
     }
 
