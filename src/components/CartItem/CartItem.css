@@ -19,11 +19,12 @@
     margin: 0px;
 }
 
-.card .card-body p{
+.card .card-body .card-text{
     margin: 0;
+    color: #5ebdb256;
 }
 
-.card div .card-text {
+.card div .card-text-sub {
     color: #e47c5d;
     margin: 15px;
 }
@@ -51,6 +52,10 @@
     }
 
     .card .card-text{
+        font-size: 10px;
+    }
+
+    .card .card-text-sub{
         font-size: 10px;
     }
 

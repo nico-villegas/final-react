@@ -18,7 +18,7 @@ const CartItem = ({ id, nombre, precio, quantity }) => {
                     <p className="card-text">Precio: ${precio}</p>
                 </div>
                 <div>
-                    <p className="card-text">SubTotal: ${totalProducts}</p>
+                    <p className="card-text-sub">SubTotal: ${totalProducts}</p>
                 </div>
                 <div className='container-btn-card  d-flex align-items-center justify-content-center'>
                     <div className='btn-card bg-danger'>
